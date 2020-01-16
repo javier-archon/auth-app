@@ -4,13 +4,10 @@ const express = require("express");
 const http = require("http");
 const bodyParser = require("body-parser");
 const morgan = require("morgan");
-const app = express();
 const router = require("./router");
-const mongoose = require("mongoose");
 const keys = require("./config/keys");
 
-//DB Setup connecting mongoose with instance of mongodb (currently on mongodb atlas)
-mongoose.connect(keys.mongoURI);
+const app = express();
 
 //App Setup, Express Server Setup
 //morgan and bodyParser are middleware in express.
